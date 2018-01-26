@@ -1,0 +1,47 @@
+<html ng-app="iot">
+     <meta charset = "UTF-8">
+    <head>
+        <title>App IOT demo Capacitacion</title>
+        
+        <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">  
+
+
+        
+
+
+    </head>
+   <body ng-controller="temperatura_controller" ng-init="obtenerDatos()">
+       
+      
+        <table class="table table-hover">
+                <thead>
+                  <tr>
+                    
+                    <th>Sensor</th>
+                    <th>Valor</th>
+                    <th>fecha</th>
+                  </tr>
+                </thead>
+                <tbody>
+
+                        <tr ng-repeat="datos in DataTemperature">
+                              
+                                <td>{{datos.C_SENSOR}}</td>
+                                <td>{{datos.C_VALUE }}</td>
+                                <td>{{datos.C_TIMESTAMP | date:'MM/dd/yyyy @ h:mma'}}</td>
+                
+                            </tr>  
+                
+                </tbody>
+              </table>
+
+
+
+
+              <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> <!– Importante llamar antes a jQuery para que funcione bootstrap.min.js   –> 
+              <script src="bootstrap/js/bootstrap.min.js"></script> 
+              <script src="./node_modules/angular/angular.min.js"></script>
+              <script src="./js/temperatura.js"></script>
+
+    </body>
+</html>
