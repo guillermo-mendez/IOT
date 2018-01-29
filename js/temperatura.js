@@ -12,7 +12,9 @@ function temperatura_controller($scope,$http){
         //Invocar serivicio web IOT metodo GET. Tabla Hana de temperatura
         $http.get(url, {
             headers: {
+
             "Authorization" : $scope.make_base_auth(user, clave)
+            
             }
           })
           .then(function successCallback(res) {
