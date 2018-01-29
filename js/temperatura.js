@@ -13,6 +13,7 @@ function temperatura_controller($scope,$http){
         $http.get(url, {
             headers: {
 
+                "Access-Control-Allow-Origin": '*',
             "Authorization" : $scope.make_base_auth(user, clave)
             
             }
