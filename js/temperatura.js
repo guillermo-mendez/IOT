@@ -6,8 +6,8 @@ function temperatura_controller($scope,$http){
 
     $scope.obtenerDatos = function(){
         var url= "https://iotmmsbc08f0ed0.us1.hana.ondemand.com/com.sap.iotservices.mms/v1/api/http/app.svc/";
-        var user= "mi usuario";
-        var clave= "mi clave";
+        var user= "P2000097896";
+        var clave= "Guillo3126012851";
         //Invocar serivicio web IOT metodo GET. Tabla Hana de temperatura
         $http.get(url, {
             headers: {
