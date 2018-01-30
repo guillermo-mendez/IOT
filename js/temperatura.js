@@ -14,15 +14,15 @@ function temperatura_controller($scope,$http){
             headers: {
                
        
-            "Authorization" : $scope.make_base_auth(user, clave),
-           // dataType: 'jsonp', //tipo de datos
-           // jsonpCallback: 'successCallback'
+            "Authorization" : $scope.make_base_auth(user, clave)
+          
             
             }
           })
           .then(function successCallback(res) {
-            //  debugger;
+             debugger;
             $scope.DataTemperature = res.data.d.results;
+
           }, function errorCallback(res){
               console.log("Error al invocar servicio SCP");
           });
